@@ -7,6 +7,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Obtener el nombre del issue
-              run: echo "El nombre del issue es = ${{ toJSON(github.event.issue) }}"
+              run: echo "El nombre del issue es = ${{ toJSON(github.event.issue.title) }}"
     
     
