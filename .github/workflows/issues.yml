@@ -1,0 +1,12 @@
+name: Check Issues
+on:
+    issues:
+      types: [opened, edited, milestoned]
+jobs:
+    issue_details:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Obtener el nombre del issue
+              run: echo "El nombre del issue es = ${{ toJSON(github.event.issue) }}"
+    
+    
